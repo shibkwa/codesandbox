@@ -1,10 +1,20 @@
-import "./styles.css";
+import React, { useState } from "react";
+import ColorfulMessage from "./components/ColorfulMessage";
 
-export default function App() {
+const App = () => {
+  const onClickCountup = () => {
+    setNum(num + 1);
+  };
+  const [num, setNum] = useState(0);
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>p
-    </div>
+    <>
+      <h1 style={{ color: "red" }}>こんにちは</h1>
+      <ColorfulMessage color="blue">お元気ですか</ColorfulMessage>
+      <ColorfulMessage color="pink">元気です！</ColorfulMessage>
+      <button onClick={onClickCountUp}>カウントアップ</button>
+      <p>{num}</p>
+    </>
   );
-}
+};
+
+export defult App;
