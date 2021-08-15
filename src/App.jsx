@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import ColorfulMessage from "./components/ColorfulMessage";
+import { useState } from "react";
+import ColorfulMessage from "./Components/ColorfulMessage";
 
 const App = () => {
-  const onClickCountup = () => {
+  const onClickCountUp = () => {
     setNum(num + 1);
   };
   const [num, setNum] = useState(0);
@@ -17,4 +17,4 @@ const App = () => {
   );
 };
 
-export defult App;
+export default App;
